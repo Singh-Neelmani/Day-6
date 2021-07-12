@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h2>Sorting an Array</h2>
+        <p>Sort Array alphabetically.</p>
+        <button onclick="myFunction()">Try It</button>
+        <p id="demo"></p>
+        <script>
+            const students = [
+                {Name: 'Anurag', math: '50' ,physics:'60'},
+                {Name: 'Sharad', math: '40' ,physics:'70'},
+                {Name: 'Shubham', math: '55' ,physics:'65'},
+                {Name: 'Shudhanshu', math: '65' ,physics:'55'},
+                {Name: 'Rohit', math: '75' ,physics:'55'},
+            ];
+            document.getElementById("demo").innerHTML = JSON.stringify(students, null, 4);
+            function myFunction(){
+                students.sort((a, b) => (a.math < b.math) ? 1 : -1);
+                document.getElementById("demo").innerHTML=JSON.stringify(students, null, 4);
+            }
+        </script>
+    </body>
+</html>
